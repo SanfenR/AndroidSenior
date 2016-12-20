@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mz.sanfen.canvasshader.fragment.BitmapFragment">
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/rg_config"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_clamp"
+            android:text="@string/clamp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rb_repeat"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/repeat"
+            />
+        <RadioButton
+            android:id="@+id/rb_mirror"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mirror"
+            />
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg_config"
+        android:orientation="horizontal"
+        android:id="@+id/rg_show"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_bitmap"
+            android:text="@string/bitmap"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rb_linear"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/linear"
+            />
+        <RadioButton
+            android:id="@+id/rb_Radial"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/redial"
+            />
+    </RadioGroup>
+
+
+
+    <com.mz.sanfen.canvasshader.custom.BitmapView
+        android:id="@+id/bv"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+        android:layout_below="@id/rg_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <com.mz.sanfen.canvasshader.custom.LinearView
+        android:layout_below="@id/rg_show"
+        android:visibility="gone"
+        android:id="@+id/lv"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.mz.sanfen.canvasshader.custom.RadialView
+        android:layout_below="@id/rg_show"
+        android:visibility="gone"
+        android:id="@+id/rv"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>
