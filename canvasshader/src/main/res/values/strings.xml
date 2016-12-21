@@ -11,4 +11,5 @@
     <string name="bitmap">BITMAP</string>
     <string name="linear">LINEAR</string>
     <string name="redial">REDIAL</string>
+    <string name="sweep">SWEEP</string>
 </resources>

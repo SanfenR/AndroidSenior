@@ -4,7 +4,6 @@ package com.mz.sanfen.canvasshader.fragment;
 import android.graphics.Shader;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ShareCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +13,7 @@ import com.mz.sanfen.canvasshader.R;
 import com.mz.sanfen.canvasshader.custom.BitmapView;
 import com.mz.sanfen.canvasshader.custom.LinearView;
 import com.mz.sanfen.canvasshader.custom.RadialView;
+import com.mz.sanfen.canvasshader.custom.SweepView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +23,7 @@ public class BitmapFragment extends Fragment {
     public BitmapView bv;
     public LinearView lv;
     public RadialView rv;
+    public SweepView sv;
 
     public RadioGroup rg_config, rg_show;
 
@@ -47,6 +48,7 @@ public class BitmapFragment extends Fragment {
         bv = (BitmapView) view.findViewById(R.id.bv);
         lv = (LinearView) view.findViewById(R.id.lv);
         rv = (RadialView) view.findViewById(R.id.rv);
+        sv = (SweepView) view.findViewById(R.id.sv);
 
         rg_config = (RadioGroup) view.findViewById(R.id.rg_config);
         rg_show = (RadioGroup) view.findViewById(R.id.rg_show);
@@ -82,14 +84,16 @@ public class BitmapFragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId){
                     case R.id.rb_bitmap:
-                        show(bv, lv, rv);
+                        show(bv, lv, rv, sv);
                         break;
                     case R.id.rb_linear:
-                        show(lv, bv, rv);
+                        show(lv, bv, rv, sv);
                         break;
                     case R.id.rb_Radial:
-                        show(rv, lv, bv);
+                        show(rv, lv, bv, sv);
                         break;
+                    case R.id.rb_sweep:
+                        show(sv, rv, lv, bv);
                 }
             }
         });
