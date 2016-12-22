@@ -46,10 +46,8 @@ public class SweepView extends View {
 
     public void drawSweep(){
         //SweepGradient sweep = new SweepGradient(getWidth() /2, getHeight() / 2, Color.GREEN, Color.BLUE);
-
-
-        int[] colors = {Color.RED, Color.GREEN, Color.BLUE};
-        float[] positions = {0f, 0.5f, 0f};
+        int[] colors = {Color.RED, Color.WHITE, Color.YELLOW};
+        float[] positions = {0f, 0.75f, 0f};
         SweepGradient sweep = new SweepGradient(getWidth() / 2 , getHeight() / 2, colors, positions);
 
         mPaint.setShader(sweep);

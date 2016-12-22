@@ -39,25 +39,19 @@ public class BitmapView extends View {
         super(context, attrs, defStyleAttr);
         init();
     }
-
-
     private void init() {
         mPaint = new Paint();
         drawBitmap();
     }
-
-
     public void setTileMode(Shader.TileMode mDefaultTileMode) {
         this.mDefaultTileMode = mDefaultTileMode;
         requestLayout();
     }
-
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
         drawBitmap();
     }
-
     public void drawBitmap(){
         bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.music_player);
         BitmapShader bitmapShader = new BitmapShader(bitmap,
@@ -66,7 +60,6 @@ public class BitmapView extends View {
         );
         mPaint.setShader(bitmapShader);
     }
-
     @Override
     protected void onDraw(Canvas canvas) {
         canvas.drawRect(0, 0,  canvas.getWidth(), canvas.getHeight(), mPaint);

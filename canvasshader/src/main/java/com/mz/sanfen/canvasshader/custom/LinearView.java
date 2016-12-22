@@ -51,8 +51,8 @@ public class LinearView extends View {
     public void drawLinear(){
         LinearGradient linearGradient = new LinearGradient(
                 0, 0, getWidth() / 4, getHeight() / 4,
-                Color.GREEN,
-                Color.BLUE,
+                Color.YELLOW,
+                Color.RED,
                 mDefaultTileMode
         );
         mPaint.setShader(linearGradient);

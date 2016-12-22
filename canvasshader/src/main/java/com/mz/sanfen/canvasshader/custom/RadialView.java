@@ -54,7 +54,7 @@ public class RadialView extends View {
     public void drawRadial(){
         RadialGradient radial = new RadialGradient(
                 getWidth() / 2, getHeight() / 2, getWidth() / 4,
-                Color.GREEN, Color.BLUE,
+                Color.YELLOW, Color.RED,
                 mDefaultTileMode
         );
 

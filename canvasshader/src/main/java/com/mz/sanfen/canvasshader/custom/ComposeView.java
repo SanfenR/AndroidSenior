@@ -51,7 +51,7 @@ public class ComposeView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         canvas.saveLayer(0, 0, mBitmapWidth, mBitmapHeight, null, Canvas.ALL_SAVE_FLAG);
-        mPaint.setShader()
+        //mPaint.setShader()
         canvas.drawRect(0, 0, mBitmapWidth, mBitmapHeight, mPaint);
 
         Xfermode xfermode = mPaint.setXfermode(mPorterDuffXfermode);
