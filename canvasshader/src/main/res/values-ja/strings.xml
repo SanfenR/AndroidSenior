@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">CanvasShader</string>
+	<string name="hello_blank_fragment">こんにちは空のフラグメント</string>
+	<string name="clamp">クランプ</string>
+	<string name="repeat">繰り返します</string>
+	<string name="mirror">ミラー</string>
+	<string name="bitmap">ビットマップ</string>
+	<string name="linear">線形</string>
+	<string name="redial">リダイヤル</string>
+	<string name="sweep">掃引します。</string>
+
+</resources>

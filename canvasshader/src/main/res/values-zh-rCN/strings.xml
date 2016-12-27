@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">CanvasShader</string>
+	<string name="hello_blank_fragment">你好空白片段</string>
+	<string name="clamp">夹钳</string>
+	<string name="repeat">重复</string>
+	<string name="mirror">镜子</string>
+	<string name="bitmap">位图</string>
+	<string name="linear">线性</string>
+	<string name="redial">重拨</string>
+	<string name="sweep">扫描</string>
+
+</resources>

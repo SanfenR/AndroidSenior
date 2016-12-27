@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         initView();
     }
 
+
+
+
+
     private void initView() {
 
         mAdapter = new MyFragmentAdapter(getSupportFragmentManager(), this);

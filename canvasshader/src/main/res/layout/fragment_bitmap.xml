@@ -6,108 +6,104 @@
 
 
     <RadioGroup
+        android:id="@+id/rg_config"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/rg_config"
-        >
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/rb_clamp"
-            android:text="@string/clamp"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content" />
+            android:text="@string/clamp" />
 
         <RadioButton
             android:id="@+id/rb_repeat"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/repeat"
-            />
+            android:layout_weight="1"
+            android:text="@string/repeat" />
+
         <RadioButton
             android:id="@+id/rb_mirror"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/mirror"
-            />
+            android:text="@string/mirror" />
     </RadioGroup>
 
 
     <RadioGroup
+        android:id="@+id/rg_show"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rg_config"
-        android:orientation="horizontal"
-        android:id="@+id/rg_show"
-        >
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/rb_bitmap"
-            android:text="@string/bitmap"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content" />
+            android:text="@string/bitmap" />
 
         <RadioButton
             android:id="@+id/rb_linear"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/linear"
-            />
+            android:layout_weight="1"
+            android:text="@string/linear" />
+
         <RadioButton
             android:id="@+id/rb_Radial"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/redial"
-            />
+            android:text="@string/redial" />
 
         <RadioButton
             android:id="@+id/rb_sweep"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/sweep"/>
+            android:text="@string/sweep" />
 
 
     </RadioGroup>
 
 
-
     <com.mz.sanfen.canvasshader.custom.BitmapView
         android:id="@+id/bv"
-        android:layout_margin="20dp"
-        android:visibility="gone"
-        android:layout_below="@id/rg_show"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/rg_show"
+        android:layout_margin="20dp"
+        android:visibility="gone" />
 
 
     <com.mz.sanfen.canvasshader.custom.LinearView
-        android:layout_below="@id/rg_show"
-        android:visibility="gone"
         android:id="@+id/lv"
-        android:layout_margin="20dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/rg_show"
+        android:layout_margin="20dp"
+        android:visibility="gone" />
 
     <com.mz.sanfen.canvasshader.custom.RadialView
-        android:layout_below="@id/rg_show"
-        android:visibility="gone"
         android:id="@+id/rv"
-        android:layout_margin="20dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-    <com.mz.sanfen.canvasshader.custom.SweepView
+        android:layout_height="match_parent"
         android:layout_below="@id/rg_show"
-        android:visibility="gone"
-        android:id="@+id/sv"
         android:layout_margin="20dp"
+        android:visibility="gone" />
+
+    <com.mz.sanfen.canvasshader.custom.SweepView
+        android:id="@+id/sv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/rg_show"
+        android:layout_margin="20dp"
+        android:visibility="gone" />
 
 </RelativeLayout>
