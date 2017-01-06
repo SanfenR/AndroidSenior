@@ -1,1 +1,1 @@
-include ':canvasshader'
+include ':canvasshader', ':appicon'
