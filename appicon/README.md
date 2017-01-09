@@ -149,6 +149,7 @@ Java代码
 ```
 在执行setIcon()之后，桌面会过一段时间显示新的图标，如果需要立即刷新图标，在执行setIcon()方法之后执行如下可以立即刷新。
 
+
 ```java
                 Intent intent = new Intent(Intent.ACTION_MAIN);
                 intent.addCategory(Intent.CATEGORY_HOME);
