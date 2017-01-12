@@ -23,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         MyFragmentPageAdapter adapter = new MyFragmentPageAdapter(getSupportFragmentManager());
-        adapter.addFragment(OneFragment.newInstance(), "首页");
+        adapter.addFragment(MainFragment.newInstance(), "首页");
+        adapter.addFragment(OtherFragment.newInstance(), "详情");
+
+        viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
     }
