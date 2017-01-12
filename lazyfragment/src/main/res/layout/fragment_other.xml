@@ -1,11 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/other_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.mz.sanfen.lazyfragment.OtherFragment">
-    <FrameLayout
-        android:id="@+id/one_frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
 </FrameLayout>

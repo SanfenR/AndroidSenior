@@ -14,7 +14,9 @@ import android.view.ViewGroup;
  */
 public class MainFragment extends Fragment {
 
-    private static final String TAG = "TwoFragment";
+    private static final String TAG = "MainFragment";
+
+
     public MainFragment() {
         // Required empty public constructor
     }

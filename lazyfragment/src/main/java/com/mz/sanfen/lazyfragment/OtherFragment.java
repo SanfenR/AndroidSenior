@@ -17,7 +17,7 @@ import android.widget.TextView;
  */
 public class OtherFragment extends Fragment {
 
-    private static final String TAG = "OneFragment";
+    private static final String TAG = "OtherFragment";
 
     FrameLayout frameLayout;
 
@@ -46,7 +46,7 @@ public class OtherFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View inflate = inflater.inflate(R.layout.fragment_other, container, false);
-        frameLayout = (FrameLayout) inflate.findViewById(R.id.one_frame);
+        frameLayout = (FrameLayout) inflate.findViewById(R.id.other_frame);
         Log.e(TAG, "onCreateView: " + frameLayout );
         return inflate;
     }
@@ -58,7 +58,7 @@ public class OtherFragment extends Fragment {
         if (isVisibleToUser) {
             if (contentView == null ) {
                 contentView = LayoutInflater.from(getActivity()).inflate(R.layout.content_other, frameLayout, true);
-                textView = (TextView) contentView.findViewById(R.id.one_text);
+                textView = (TextView) contentView.findViewById(R.id.other_text);
                 textView.setText("load other fragment");
             }
         }
