@@ -1,1 +1,1 @@
-include ':canvasshader', ':appicon'
+include ':canvasshader', ':appicon', ':lazyfragment'
