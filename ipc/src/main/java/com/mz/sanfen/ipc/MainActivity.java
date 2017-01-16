@@ -10,10 +10,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.List;
 
+
+/**
+ * http://www.open-open.com/lib/view/open1469494852171.html
+ */
 public class MainActivity extends AppCompatActivity {
 
     private BookManager mBookManager = null;
@@ -41,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
     public void addBook(View view) {
         if (!mBound) {
             attemptToBindService();
-            //Toast.makeText(this, "当前与服务器处于未连接状态，正在尝试重新连接", Toast.LENGTH_SHORT).show();
-            //return;
+            Toast.makeText(this, "当前与服务器处于未连接状态，正在尝试重新连接", Toast.LENGTH_SHORT).show();
+            return;
         }
         if (mBookManager == null) return;
 
@@ -52,7 +57,13 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             mBookManager.addBook(book);
-            Log.e(TAG, "addBook: " + book.toString());
+            Log.e(TAG, "addBook: book" + book.toString());
+
+            List<Book> books = mBookManager.getBooks();
+
+            for (Book b : books) {
+                Log.e(TAG, "addBook: books" + b.toString());
+            }
         } catch (RemoteException e) {
             e.printStackTrace();
         }
