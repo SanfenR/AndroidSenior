@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.mz.sanfen.ipc.messenger.MessengerActivity;
 import com.mz.sanfen.ipc.provider.ProviderActivity;
+import com.mz.sanfen.ipc.socket.TCPClientActivity;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -18,6 +19,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.AIDL).setOnClickListener(this);
         findViewById(R.id.Messenger).setOnClickListener(this);
         findViewById(R.id.Provider).setOnClickListener(this);
+        findViewById(R.id.Socket).setOnClickListener(this);
     }
 
     @Override
@@ -35,6 +37,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.Provider:
                 Intent intent2 = new Intent(this, ProviderActivity.class);
                 startActivity(intent2);
+                break;
+            case R.id.Socket:
+                Intent intent3 = new Intent(this, TCPClientActivity.class);
+                startActivity(intent3);
                 break;
             default:
         }
