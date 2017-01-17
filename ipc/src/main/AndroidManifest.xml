@@ -9,11 +9,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <service
@@ -21,13 +16,31 @@
             android:enabled="true"
             android:exported="true"
             android:process=":remote">
+            <intent-filter>
+                <action android:name="com.mz.sanfen.ipc" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".messenger.MessengerActivity"
+            android:label="@string/title_activity_messenger"
+            android:theme="@style/AppTheme.NoActionBar" >
 
             <intent-filter>
-                <action android:name="com.mz.sanfen.ipc"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-        </service>
+        </activity>
+
+        <service
+            android:name=".messenger.MessengerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":messenger"
+            />
     </application>
 
 </manifest>
