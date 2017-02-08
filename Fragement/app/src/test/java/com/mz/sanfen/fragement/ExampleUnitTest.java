@@ -1,4 +1,4 @@
-package com.mz.sanfen.messagemechanism;
+package com.mz.sanfen.fragement;
 
 import org.junit.Test;
 

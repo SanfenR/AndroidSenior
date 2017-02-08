@@ -1,5 +1,6 @@
 package com.mz.sanfen.messagemechanism;
 
+import android.os.MessageQueue;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,8 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.threadlocal).setOnClickListener(this);
 
-        mBooleanThreadLocal.set(true);
-        Log.e(TAG, "onCreate: Thread#main " + mBooleanThreadLocal.get());
+
 
     }
 
@@ -33,6 +33,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ThreadLocal<Boolean> mBooleanThreadLocal = new ThreadLocal<>();
 
     private void startThread(){
+        mBooleanThreadLocal.set(true);
+        Log.e(TAG, "onCreate: Thread#main " + mBooleanThreadLocal.get());
+
         new Thread("Thread#1"){
             @Override
             public void run() {
